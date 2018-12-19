@@ -27,11 +27,11 @@ The refactored configuration would look like:
 // Again not actual code but an example
 
 // Replace the random_pet with a module which creates a random_pet
-module "rnd_pet" {}
+module "module_name" {}
 
 // the null_resource now refers to the module
 resource "null_resource" "hello" {
-  // uses ${module.rnd_pet.pet_id}
+  // uses ${module.module_name.pet_id}
 }
 ```
 
